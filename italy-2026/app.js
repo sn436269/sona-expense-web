@@ -24,9 +24,11 @@
     if (!target?.classList.contains('day')) return;
     if(target.hidden){$('#search').value='';$('#city').value='';filterDays();}
     target.open=true;
+    if ($('#quick-date')) $('#quick-date').value=id;
     $$('.date-rail a').forEach(a=>a.classList.toggle('active',a.hash===location.hash));
     requestAnimationFrame(()=>target.scrollIntoView({block:'start'}));
   }
+  $('#quick-date')?.addEventListener('change', ev => {if (ev.target.value) {location.hash=ev.target.value;followHash();}});
   addEventListener('hashchange',followHash);
   $$('.date-rail a').forEach(a=>a.addEventListener('click',()=>{const d=document.getElementById(a.hash.slice(1));d.open=true;if(d.hidden){$('#search').value='';$('#city').value='';filterDays();}if(location.hash===a.hash)followHash();}));
   $$('dialog .close-dialog').forEach(b=>b.onclick=()=>b.closest('dialog').close());
