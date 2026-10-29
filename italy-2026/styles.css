@@ -34,3 +34,15 @@ a.map-button{display:inline-flex;align-items:center;text-decoration:none}
 }
 @media screen and (max-width:640px){.date-rail a.has-route{display:flex;gap:0}.date-rail a.has-route small{display:none}}
 @media screen{.date-rail a small span{font:inherit;color:inherit}}
+/* Artwork actions sit beside the title, using the right-hand space. */
+@media screen{
+ .art-card{container-type:inline-size}
+ .art-card .album-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+ .art-card .album-heading>div:first-child{flex:1;min-width:0}
+ .art-card .album-actions{margin-top:0;flex-shrink:0}
+ .art-card .album-actions a,.art-card .album-actions button{white-space:nowrap}
+}
+@container (max-width:420px){
+ .art-card .album-actions{flex-direction:column;align-items:stretch}
+ .art-card .album-actions a,.art-card .album-actions button{justify-content:center}
+}
