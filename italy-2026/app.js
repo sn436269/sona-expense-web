@@ -114,7 +114,7 @@
   $('#upload-dialog .close-dialog').onclick=()=>{if(uploading){status.textContent='正在保存照片，請等待這一批完成。';return;}$('#upload-dialog').close();};
   function openPhoto(p){openedPhoto=p.id;$('#photo-title').textContent=p.title;$('#photo-full').src=api('/media/display/'+p.id+'.jpg');$('#photo-full').alt=p.title;$('#photo-description').textContent=p.caption;$('#archive-photo').hidden=!savedKey();$('#photo-dialog').showModal();}
   $('#archive-photo').onclick=async()=>{try{await request('/api/photos/'+openedPhoto+'/archive',{method:'POST',headers:{Authorization:'Bearer '+savedKey()}});$('#photo-dialog').close();await refreshPhotos();}catch(err){$('#photo-description').textContent=err.message;}};
-  Promise.all([fetch('places.json').then(r=>r.json()),fetch('photo-service.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({}))]).then(([catalog,config])=>{
+  Promise.all([fetch('places.json',{cache:'no-store'}).then(r=>r.json()),fetch('photo-service.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({}))]).then(([catalog,config])=>{
     places=catalog.places;let custom='';try{custom=localStorage.getItem('italy-service')||'';}catch(_){}service=validService(custom)||validService(config.baseUrl);filterAlbums();refreshPhotos();
   }).catch(()=>{$('#connection-status').textContent='相簿資料暫時無法讀取，請重新整理網頁。';});
 })();

@@ -73,18 +73,6 @@
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Fontana%20dell%E2%80%99Acqua%20Felice%2C%20%E7%BE%85%E9%A6%AC%2C%20Italy"
     },
     {
-      "id": "four-fountains",
-      "city": "羅馬",
-      "title": "四泉路口",
-      "localName": "Quattro Fontane",
-      "date": "01-24",
-      "kind": "景點與建築",
-      "parent": null,
-      "artist": "",
-      "mapQuery": "Quattro Fontane, 羅馬, Italy",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Quattro%20Fontane%2C%20%E7%BE%85%E9%A6%AC%2C%20Italy"
-    },
-    {
       "id": "quirinale",
       "city": "羅馬",
       "title": "奎里納雷宮與廣場",
@@ -467,18 +455,6 @@
       "artist": "",
       "mapQuery": "Fontana dei Libri, 羅馬, Italy",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Fontana%20dei%20Libri%2C%20%E7%BE%85%E9%A6%AC%2C%20Italy"
-    },
-    {
-      "id": "sapienza",
-      "city": "羅馬",
-      "title": "智慧宮與聖依華堂",
-      "localName": "Sant’Ivo alla Sapienza",
-      "date": "02-03",
-      "kind": "景點與建築",
-      "parent": null,
-      "artist": "",
-      "mapQuery": "Sant’Ivo alla Sapienza, 羅馬, Italy",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sant%E2%80%99Ivo%20alla%20Sapienza%2C%20%E7%BE%85%E9%A6%AC%2C%20Italy"
     },
     {
       "id": "luigi",
@@ -901,54 +877,6 @@
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Palazzo%20Vecchio%20Torre%20di%20Arnolfo%2C%20%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%2C%20Italy"
     },
     {
-      "id": "fiesole-francesco",
-      "city": "菲耶索萊",
-      "title": "聖方濟各修院",
-      "localName": "Convento di San Francesco Fiesole",
-      "date": "01-29",
-      "kind": "景點與建築",
-      "parent": null,
-      "artist": "",
-      "mapQuery": "Convento di San Francesco Fiesole, 菲耶索萊, Italy",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Convento%20di%20San%20Francesco%20Fiesole%2C%20%E8%8F%B2%E8%80%B6%E7%B4%A2%E8%90%8A%2C%20Italy"
-    },
-    {
-      "id": "fiesole-panorama",
-      "city": "菲耶索萊",
-      "title": "聖方濟各觀景台",
-      "localName": "Panorama di San Francesco Fiesole",
-      "date": "01-29",
-      "kind": "景點與建築",
-      "parent": null,
-      "artist": "",
-      "mapQuery": "Panorama di San Francesco Fiesole, 菲耶索萊, Italy",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Panorama%20di%20San%20Francesco%20Fiesole%2C%20%E8%8F%B2%E8%80%B6%E7%B4%A2%E8%90%8A%2C%20Italy"
-    },
-    {
-      "id": "fiesole-mino",
-      "city": "菲耶索萊",
-      "title": "米諾廣場",
-      "localName": "Piazza Mino da Fiesole",
-      "date": "01-29",
-      "kind": "景點與建築",
-      "parent": null,
-      "artist": "",
-      "mapQuery": "Piazza Mino da Fiesole, 菲耶索萊, Italy",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Piazza%20Mino%20da%20Fiesole%2C%20%E8%8F%B2%E8%80%B6%E7%B4%A2%E8%90%8A%2C%20Italy"
-    },
-    {
-      "id": "fiesole-theatre",
-      "city": "菲耶索萊",
-      "title": "羅馬劇場",
-      "localName": "Teatro Romano di Fiesole",
-      "date": "01-29",
-      "kind": "景點與建築",
-      "parent": null,
-      "artist": "",
-      "mapQuery": "Teatro Romano di Fiesole, 菲耶索萊, Italy",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Teatro%20Romano%20di%20Fiesole%2C%20%E8%8F%B2%E8%80%B6%E7%B4%A2%E8%90%8A%2C%20Italy"
-    },
-    {
       "id": "bologna-station",
       "city": "波隆那",
       "title": "波隆那中央車站",
@@ -1293,16 +1221,6 @@
       "artist": "拉斐爾"
     },
     {
-      "id": "uffizi-urbino-venus",
-      "city": "佛羅倫斯",
-      "title": "烏爾比諾的維納斯",
-      "localName": "Venere di Urbino",
-      "date": "01-27",
-      "kind": "繪畫",
-      "parent": "uffizi",
-      "artist": "提香"
-    },
-    {
       "id": "uffizi-medusa",
       "city": "佛羅倫斯",
       "title": "梅杜莎",
@@ -1473,36 +1391,6 @@
       "artist": "貝尼尼"
     },
     {
-      "id": "borghese-bernini-david",
-      "city": "羅馬",
-      "title": "大衛",
-      "localName": "David",
-      "date": "02-05",
-      "kind": "雕塑",
-      "parent": "borghese",
-      "artist": "貝尼尼"
-    },
-    {
-      "id": "borghese-aeneas",
-      "city": "羅馬",
-      "title": "埃涅阿斯、安喀塞斯與阿斯卡尼奧斯",
-      "localName": "Enea Anchise e Ascanio",
-      "date": "02-05",
-      "kind": "雕塑",
-      "parent": "borghese",
-      "artist": "貝尼尼"
-    },
-    {
-      "id": "borghese-fruit-boy",
-      "city": "羅馬",
-      "title": "捧果籃的男孩",
-      "localName": "Fanciullo con canestro di frutta",
-      "date": "02-05",
-      "kind": "繪畫",
-      "parent": "borghese",
-      "artist": "卡拉瓦喬"
-    },
-    {
       "id": "borghese-sick-bacchus",
       "city": "羅馬",
       "title": "病中的酒神",
@@ -1573,16 +1461,6 @@
       "artist": "梵蒂岡壁畫"
     },
     {
-      "id": "uffizi-pallas",
-      "city": "佛羅倫斯",
-      "title": "帕拉斯與半人馬",
-      "localName": "Pallade e il centauro",
-      "date": "01-27",
-      "kind": "繪畫",
-      "parent": "uffizi",
-      "artist": "波提切利"
-    },
-    {
       "id": "uffizi-magnificat",
       "city": "佛羅倫斯",
       "title": "尊主頌聖母",
@@ -1601,16 +1479,6 @@
       "kind": "繪畫",
       "parent": "uffizi",
       "artist": "波提切利"
-    },
-    {
-      "id": "uffizi-lippi-madonna",
-      "city": "佛羅倫斯",
-      "title": "聖母子與兩位天使",
-      "localName": "Madonna col Bambino e due angeli",
-      "date": "01-27",
-      "kind": "繪畫",
-      "parent": "uffizi",
-      "artist": "菲利波・利皮"
     },
     {
       "id": "pitti-granduca",
@@ -1653,30 +1521,10 @@
       "artist": "菲利波・利皮"
     },
     {
-      "id": "borghese-paolina",
-      "city": "羅馬",
-      "title": "寶琳娜・波拿巴（勝利的維納斯）",
-      "localName": "Paolina Borghese come Venere vincitrice",
-      "date": "02-05",
-      "kind": "雕塑",
-      "parent": "borghese",
-      "artist": "安東尼奧・卡諾瓦"
-    },
-    {
       "id": "borghese-jerome",
       "city": "羅馬",
       "title": "書寫中的聖哲羅姆",
       "localName": "San Girolamo scrivente",
-      "date": "02-05",
-      "kind": "繪畫",
-      "parent": "borghese",
-      "artist": "卡拉瓦喬"
-    },
-    {
-      "id": "borghese-goliath",
-      "city": "羅馬",
-      "title": "大衛與歌利亞的頭顱",
-      "localName": "David con la testa di Golia",
       "date": "02-05",
       "kind": "繪畫",
       "parent": "borghese",
@@ -1691,30 +1539,6 @@
       "kind": "繪畫",
       "parent": "borghese",
       "artist": "拉斐爾"
-    },
-    {
-      "id": "sabina",
-      "city": "羅馬",
-      "title": "聖撒比納堂",
-      "localName": "Basilica di Santa Sabina all’Aventino",
-      "date": "02-06",
-      "kind": "景點與建築",
-      "parent": null,
-      "artist": "",
-      "mapQuery": "Basilica di Santa Sabina all’Aventino, 羅馬, Italy",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Basilica%20di%20Santa%20Sabina%20all%E2%80%99Aventino%2C%20%E7%BE%85%E9%A6%AC%2C%20Italy"
-    },
-    {
-      "id": "orange-garden",
-      "city": "羅馬",
-      "title": "橘園",
-      "localName": "Giardino degli Aranci Roma",
-      "date": "02-06",
-      "kind": "景點與建築",
-      "parent": null,
-      "artist": "",
-      "mapQuery": "Giardino degli Aranci Roma, 羅馬, Italy",
-      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Giardino%20degli%20Aranci%20Roma%2C%20%E7%BE%85%E9%A6%AC%2C%20Italy"
     }
   ]
 }
