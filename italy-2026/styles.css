@@ -21,3 +21,16 @@ a.map-button{display:inline-flex;align-items:center;text-decoration:none}
 @media print{.quick-nav{display:none!important}}
 @media screen{.day{scroll-margin-top:0}}
 @media screen and (max-width:640px){.day-date small{letter-spacing:.5px}}
+/* Route names stay complete; period labels size to their text. */
+@media screen{
+ .slot{grid-template-columns:max-content minmax(0,1fr)}
+ .slot .period{min-width:4.5em;white-space:nowrap;letter-spacing:0}
+ .date-rail a>span{flex-shrink:0}
+ .date-rail a.has-route{display:grid;grid-template-columns:1fr;gap:2px}
+ .date-rail a small{line-height:1.5}
+ .date-rail a.has-route small{display:flex;flex-wrap:wrap;gap:0 4px}
+ .date-rail a small span{white-space:nowrap}
+ .date-rail a small span+span::before{content:'› ';color:var(--muted)}
+}
+@media screen and (max-width:640px){.date-rail a.has-route{display:flex;gap:0}.date-rail a.has-route small{display:none}}
+@media screen{.date-rail a small span{font:inherit;color:inherit}}
