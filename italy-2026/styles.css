@@ -46,3 +46,10 @@ a.map-button{display:inline-flex;align-items:center;text-decoration:none}
  .art-card .album-actions{flex-direction:column;align-items:stretch}
  .art-card .album-actions a,.art-card .album-actions button{justify-content:center}
 }
+
+/* Reference photos float in existing whitespace; they never participate in row sizing. */
+.slot-reference{position:absolute;right:0;top:50%;transform:translateY(-50%);display:flex;flex-flow:row nowrap;gap:6px;max-width:300px;overflow:hidden;margin:0;padding:0;line-height:0}
+.slot-reference[hidden],.slot-reference a[hidden]{display:none!important}
+.slot-reference a{display:block;flex:0 0 var(--reference-width);width:var(--reference-width);height:var(--reference-height);border:1px solid var(--line);border-radius:2px;background:var(--paper);overflow:hidden}
+.slot-reference img{display:block;width:100%;height:100%;object-fit:contain}
+@media print{.slot-reference{display:none!important}}

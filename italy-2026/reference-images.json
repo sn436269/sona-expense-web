@@ -1,0 +1,854 @@
+{
+  "slots": {
+    "01-24/3": [
+      {
+        "src": "reference-images/89453ba8786f.jpg",
+        "label": "Sant'Ignazio, Rome",
+        "source": "https://commons.wikimedia.org/wiki/File:Church_of_Sant%27Ignazio_di_Loyola.jpg",
+        "artist": "Fiat 500e",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "wikiTitle": "Sant'Ignazio, Rome"
+      }
+    ],
+    "01-24/4": [
+      {
+        "src": "reference-images/b036a3beefc5.jpg",
+        "label": "Pantheon, Rome",
+        "source": "https://commons.wikimedia.org/wiki/File:Pantheon_(Rome)_-_Right_side_and_front.jpg",
+        "artist": "NikonZ7II",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Pantheon, Rome"
+      }
+    ],
+    "01-24/5": [
+      {
+        "src": "reference-images/aabe18416e36.jpg",
+        "label": "Elephant and Obelisk",
+        "source": "https://commons.wikimedia.org/wiki/File:Elephant_and_Obelisk_-_Bernini.jpg",
+        "artist": "Petar Milošević",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Elephant and Obelisk"
+      }
+    ],
+    "01-24/6": [
+      {
+        "src": "reference-images/c339497be563.jpg",
+        "label": "Santa Maria sopra Minerva",
+        "source": "https://commons.wikimedia.org/wiki/File:Santa_Maria_sopra_Minerva.jpg",
+        "artist": "Merulana",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Santa Maria sopra Minerva"
+      },
+      {
+        "src": "reference-images/b5b1d374b402.jpg",
+        "label": "Risen Christ (Michelangelo, Santa Maria sopra Minerva)",
+        "source": "https://commons.wikimedia.org/wiki/File:Michelangelo-Christ.jpg",
+        "artist": "User:Tetraktys",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "wikiTitle": "Risen Christ (Michelangelo, Santa Maria sopra Minerva)"
+      }
+    ],
+    "01-24/7": [
+      {
+        "src": "reference-images/fa52c96fb061.jpg",
+        "label": "Largo di Torre Argentina",
+        "source": "https://commons.wikimedia.org/wiki/File:Curia_of_Pompey.jpg",
+        "artist": "Sotamies",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Largo di Torre Argentina"
+      }
+    ],
+    "01-24/8": [
+      {
+        "src": "reference-images/3a81dff885ae.jpg",
+        "label": "Theatre of Marcellus",
+        "source": "https://commons.wikimedia.org/wiki/File:Teatro_di_Marcello_intero.jpg",
+        "artist": "Fiat 500e",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Theatre of Marcellus"
+      },
+      {
+        "src": "reference-images/fc9fee042eab.jpg",
+        "label": "Casa dei Crescenzi",
+        "source": "https://commons.wikimedia.org/wiki/File:Casa_dei_Crescenzi_portal.jpg",
+        "artist": "Jensens",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Casa dei Crescenzi"
+      }
+    ],
+    "01-24/9": [
+      {
+        "src": "reference-images/f7875e20c0e6.jpg",
+        "label": "Temple of Portunus",
+        "source": "https://commons.wikimedia.org/wiki/File:L06_709e_Tempel_des_Portunus.jpg",
+        "artist": "Falk2",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Temple of Portunus"
+      },
+      {
+        "src": "reference-images/d662139f0bb6.jpg",
+        "label": "Temple of Hercules Victor",
+        "source": "https://commons.wikimedia.org/wiki/File:Temple_of_Hercules_Victor_Rome_April_2019.jpg",
+        "artist": "ChromosomeGun",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Temple of Hercules Victor"
+      }
+    ],
+    "01-24/10": [
+      {
+        "src": "reference-images/6de8ca2bd97b.jpg",
+        "label": "Bocca della Verità",
+        "source": "https://commons.wikimedia.org/wiki/File:Et%C3%A0_imperiale,_chiusino_a_forma_di_mascherone_di_divinit%C3%A0_fluviale,_detta_bocca_della_verit%C3%A0,_collocata_qui_nel_1632.jpg",
+        "artist": "Sailko",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "wikiTitle": "Bocca della Verità"
+      }
+    ],
+    "01-24/11": [
+      {
+        "src": "reference-images/387b6263b60a.jpg",
+        "label": "Rooms of Saint Ignatius",
+        "source": "https://commons.wikimedia.org/wiki/File:Gesu_Church,_corridor_to_St_Ignatius%27_rooms,_Rome_(42865974115).jpg",
+        "artist": "Pjposullivan1 from UK",
+        "license": "CC BY-SA 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+        "wikiTitle": "Rooms of Saint Ignatius"
+      }
+    ],
+    "01-25/1": [
+      {
+        "src": "reference-images/71753e916ce2.jpg",
+        "label": "拉奧孔群像",
+        "source": "https://commons.wikimedia.org/wiki/File:Laoco%C3%B6n_and_his_sons_group.jpg",
+        "artist": "Wilfredor",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "wikiTitle": "Laocoön and His Sons"
+      },
+      {
+        "src": "reference-images/75e6f7f621e1.jpg",
+        "label": "望樓的阿波羅",
+        "source": "https://commons.wikimedia.org/wiki/File:Apollo_del_Belvedere.jpg",
+        "artist": "Livioandronico2013",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Apollo Belvedere"
+      },
+      {
+        "src": "reference-images/1c8a00403f8d.jpg",
+        "label": "雅典學院",
+        "source": "https://commons.wikimedia.org/wiki/File:%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg",
+        "artist": "Raphael",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "The School of Athens"
+      }
+    ],
+    "01-25/2": [
+      {
+        "src": "reference-images/88fac6d6d010.jpg",
+        "label": "Saint Peter's Square",
+        "source": "https://commons.wikimedia.org/wiki/File:St_Peter%27s_Square,_Vatican_City_-_April_2007.jpg",
+        "artist": "Diliff",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "wikiTitle": "Saint Peter's Square"
+      },
+      {
+        "src": "reference-images/69c3b10be820.jpg",
+        "label": "Castel Sant'Angelo",
+        "source": "https://commons.wikimedia.org/wiki/File:Castel_Sant%27Angelo_at_Night.jpg",
+        "artist": "Livioandronico2013",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Castel Sant'Angelo"
+      },
+      {
+        "src": "reference-images/a8d9a1ac48b6.jpg",
+        "label": "Ponte Sant'Angelo",
+        "source": "https://commons.wikimedia.org/wiki/File:Sant%27Angelo_bridge,_dusk,_Rome,_Italy.jpg",
+        "artist": "Jebulon",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "wikiTitle": "Ponte Sant'Angelo"
+      }
+    ],
+    "01-25/3": [
+      {
+        "src": "reference-images/ac8549580d6d.jpg",
+        "label": "Trevi Fountain",
+        "source": "https://commons.wikimedia.org/wiki/File:Trevi_Fountain_-_Roma.jpg",
+        "artist": "NikonZ7II",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Trevi Fountain"
+      }
+    ],
+    "01-26/0": [
+      {
+        "src": "reference-images/4a33c1bffa77.jpg",
+        "label": "Colosseum",
+        "source": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg",
+        "artist": "FeaturedPics",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Colosseum"
+      }
+    ],
+    "01-26/1": [
+      {
+        "src": "reference-images/94312ef79fef.jpg",
+        "label": "Palatine Hill",
+        "source": "https://commons.wikimedia.org/wiki/File:Palatine_Hill_from_across_the_Circus_Maximus_April_2019.jpg",
+        "artist": "Lil Herodotus",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Palatine Hill"
+      }
+    ],
+    "01-26/2": [
+      {
+        "src": "reference-images/d31bc0613074.jpg",
+        "label": "Roman Forum",
+        "source": "https://commons.wikimedia.org/wiki/File:Foro_Romano_Musei_Capitolini_Roma.jpg",
+        "artist": "This Photo was taken by Wolfgang Moroder.  \n\nFeel free to use my photos, but please mention me as the author and send me a  message. \n\n\n\nThis image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here are not appropriate.\n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "wikiTitle": "Roman Forum"
+      }
+    ],
+    "01-26/3": [
+      {
+        "src": "reference-images/77bd48f3d879.jpg",
+        "label": "Trajan's Column",
+        "source": "https://commons.wikimedia.org/wiki/File:Trajan%27s_Column_HD.jpg",
+        "artist": "Livioandronico2013",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Trajan's Column"
+      },
+      {
+        "src": "reference-images/5e482862617e.jpg",
+        "label": "Moses (Michelangelo)",
+        "source": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_Moses_(Rome).jpg",
+        "artist": "Livioandronico2013",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Moses (Michelangelo)"
+      },
+      {
+        "src": "reference-images/dcbad9b5cba3.jpg",
+        "label": "Santa Maria Maggiore",
+        "source": "https://commons.wikimedia.org/wiki/File:Basilica_di_Santa_Maria_Maggiore_-_Roma.jpg",
+        "artist": "NikonZ7II",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Santa Maria Maggiore"
+      }
+    ],
+    "01-27/0": [
+      {
+        "src": "reference-images/d37a378d3db0.jpg",
+        "label": "春",
+        "source": "https://commons.wikimedia.org/wiki/File:Botticelli-primavera.jpg",
+        "artist": "Sandro Botticelli",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Primavera (Botticelli)"
+      },
+      {
+        "src": "reference-images/c1132af937a7.jpg",
+        "label": "維納斯的誕生",
+        "source": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_La_nascita_di_Venere_-_Google_Art_Project_-_edited.jpg",
+        "artist": "Sandro Botticelli",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "The Birth of Venus"
+      },
+      {
+        "src": "reference-images/99d7ffc55c79.jpg",
+        "label": "多尼圓畫",
+        "source": "https://commons.wikimedia.org/wiki/File:Tondo_Doni_2015.png",
+        "artist": "Michelangelo",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Doni Tondo"
+      }
+    ],
+    "01-27/1": [
+      {
+        "src": "reference-images/aba0e3f77c09.jpg",
+        "label": "梅杜莎",
+        "source": "https://commons.wikimedia.org/wiki/File:Caravaggio_-_Medusa_-_Google_Art_Project.jpg",
+        "artist": "Caravaggio",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Medusa (Caravaggio)"
+      },
+      {
+        "src": "reference-images/e53cfd7775f8.jpg",
+        "label": "酒神",
+        "source": "https://commons.wikimedia.org/wiki/File:Bacchus_by_Caravaggio_1.jpg",
+        "artist": "Caravaggio",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Bacchus (Caravaggio)"
+      },
+      {
+        "src": "reference-images/81d004154054.jpg",
+        "label": "Judith Slaying Holofernes (Artemisia Gentileschi, Florence)",
+        "source": "https://commons.wikimedia.org/wiki/File:Judit_decapitando_a_Holofernes,_por_Artemisia_Gentileschi.jpg",
+        "artist": "Artemisia Gentileschi",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Judith Slaying Holofernes (Artemisia Gentileschi, Florence)"
+      }
+    ],
+    "01-27/2": [
+      {
+        "src": "reference-images/b30ac0028242.jpg",
+        "label": "Florence Cathedral",
+        "source": "https://commons.wikimedia.org/wiki/File:Cattedrale_di_Santa_Maria_del_Fiore_%E2%80%93_Il_Duomo_di_Firenze.jpg",
+        "artist": "Gary Campbell-Hall",
+        "license": "CC BY 2.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+        "wikiTitle": "Florence Cathedral"
+      }
+    ],
+    "01-27/3": [
+      {
+        "src": "reference-images/6a5427458044.jpg",
+        "label": "Palazzo Medici Riccardi",
+        "source": "https://commons.wikimedia.org/wiki/File:Palazzo_Medici_Riccardi-Florence.jpg",
+        "artist": "Yair Haklai",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "wikiTitle": "Palazzo Medici Riccardi"
+      },
+      {
+        "src": "reference-images/e9e795b9d79b.jpg",
+        "label": "Magi Chapel",
+        "source": "https://commons.wikimedia.org/wiki/File:Benozzo_Gozzoli_-_Procession_of_the_Magi_(detail)_-_WGA10283.jpg",
+        "artist": "Benozzo Gozzoli",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Magi Chapel"
+      }
+    ],
+    "01-28/0": [
+      {
+        "src": "reference-images/bb273f527c95.jpg",
+        "label": "大衛像",
+        "source": "https://commons.wikimedia.org/wiki/File:%27David%27_by_Michelangelo_Fir_JBU004.jpg",
+        "artist": "Jörg Bittner Unna",
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+        "wikiTitle": "David (Michelangelo)"
+      }
+    ],
+    "01-28/1": [
+      {
+        "src": "reference-images/433fa0eb5086.jpg",
+        "label": "甦醒的奴隸",
+        "source": "https://commons.wikimedia.org/wiki/File:Michelangelo_-_Awakening_slave.jpg",
+        "artist": "AnonymousUnknown author",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Awakening Slave"
+      },
+      {
+        "src": "reference-images/9a1c3cbe8897.jpg",
+        "label": "阿特拉斯奴隸",
+        "source": "https://commons.wikimedia.org/wiki/File:Michelangelo_-_Atlas.jpg",
+        "artist": "Michelangelo",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Atlas Slave"
+      }
+    ],
+    "01-28/2": [
+      {
+        "src": "reference-images/6fa0cfb29d05.jpg",
+        "label": "Palazzo Vecchio",
+        "source": "https://commons.wikimedia.org/wiki/File:Piazza_della_signoria,_palazzo_vecchio,_veduta_01.jpg",
+        "artist": "Francesco Bini",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Palazzo Vecchio"
+      },
+      {
+        "src": "reference-images/776d826c5a99.jpg",
+        "label": "Loggia dei Lanzi",
+        "source": "https://commons.wikimedia.org/wiki/File:Firenze,_loggia_dei_lanzi_(2020)_01.jpg",
+        "artist": "Francesco Bini",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Loggia dei Lanzi"
+      },
+      {
+        "src": "reference-images/fd52701b1fad.jpg",
+        "label": "Fountain of Neptune, Florence",
+        "source": "https://commons.wikimedia.org/wiki/File:Firenze,_fontana_del_nettuno_(dopo_il_restauro_del_2020)_di_giorno,_01.jpg",
+        "artist": "Francesco Bini",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Fountain of Neptune, Florence"
+      }
+    ],
+    "01-29/0": [
+      {
+        "src": "reference-images/0acb70f09552.jpg",
+        "label": "Piazza Mino da Fiesole",
+        "source": "https://commons.wikimedia.org/wiki/File:Piazza_Mino_Fiesole-1.jpg",
+        "artist": "Rufus46",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "wikiTitle": "Piazza Mino da Fiesole"
+      }
+    ],
+    "01-29/1": [
+      {
+        "src": "reference-images/a0082ad4a11e.jpg",
+        "label": "Convent of San Francesco, Fiesole",
+        "source": "https://commons.wikimedia.org/wiki/File:San_Francesco_Fiesole-2.jpg",
+        "artist": "Rufus46",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "wikiTitle": "Convent of San Francesco, Fiesole"
+      }
+    ],
+    "01-29/2": [
+      {
+        "src": "reference-images/308afbde31c4.jpg",
+        "label": "Roman theatre, Fiesole",
+        "source": "https://commons.wikimedia.org/wiki/File:FiesoleDec092023_11.jpg",
+        "artist": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Roman theatre, Fiesole"
+      }
+    ],
+    "01-30/1": [
+      {
+        "src": "reference-images/b415bfca9612.jpg",
+        "label": "Two Towers, Bologna",
+        "source": "https://commons.wikimedia.org/wiki/File:Asinelli_e_Garisenda.jpg",
+        "artist": "Vanni Lazzari",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Two Towers, Bologna"
+      }
+    ],
+    "01-30/2": [
+      {
+        "src": "reference-images/22a90aec4333.jpg",
+        "label": "Archiginnasio of Bologna",
+        "source": "https://commons.wikimedia.org/wiki/File:Bologna,_Archiginnasio_02.JPG",
+        "artist": "sailko",
+        "license": "CC BY 2.5",
+        "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+        "wikiTitle": "Archiginnasio of Bologna"
+      },
+      {
+        "src": "reference-images/0fee59015ae6.jpg",
+        "label": "Biblioteca Salaborsa",
+        "source": "https://commons.wikimedia.org/wiki/File:Bologna,_Urban_Center_Bologna.jpg",
+        "artist": "Palickap",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Biblioteca Salaborsa"
+      },
+      {
+        "src": "reference-images/929c0f054518.jpg",
+        "label": "Basilica of San Petronio",
+        "source": "https://commons.wikimedia.org/wiki/File:Bologna_Italy_San_Petronio_from_Asinelli.jpg",
+        "artist": "No machine-readable author provided. ZeWrestler assumed (based on copyright claims).",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Basilica of San Petronio"
+      }
+    ],
+    "01-31/1": [
+      {
+        "src": "reference-images/bc7a325eb1b3.jpg",
+        "label": "Piazza del Campo",
+        "source": "https://commons.wikimedia.org/wiki/File:Siena5.jpg",
+        "artist": "Ricardo André Frantz (User:Tetraktys)",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "wikiTitle": "Piazza del Campo"
+      },
+      {
+        "src": "reference-images/5231855da06c.jpg",
+        "label": "Palazzo Pubblico",
+        "source": "https://commons.wikimedia.org/wiki/File:552SienaPalPubblico.JPG",
+        "artist": "MarkusMark",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Palazzo Pubblico"
+      }
+    ],
+    "01-31/3": [
+      {
+        "src": "reference-images/cf6ee231df7c.jpg",
+        "label": "San Gimignano",
+        "source": "https://commons.wikimedia.org/wiki/File:1_Aerial_pano_san_gimignano_(2)a.jpg",
+        "artist": "Chensiyuan",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "San Gimignano"
+      }
+    ],
+    "01-31/4": [
+      {
+        "src": "reference-images/cd990d132cab.jpg",
+        "label": "Leaning Tower of Pisa",
+        "source": "https://commons.wikimedia.org/wiki/File:Italy_-_Pisa_-_Leaning_Tower.jpg",
+        "artist": "Arne Müseler",
+        "license": "CC BY-SA 3.0 de",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+        "wikiTitle": "Leaning Tower of Pisa"
+      },
+      {
+        "src": "reference-images/457246479799.jpg",
+        "label": "Pisa Cathedral",
+        "source": "https://commons.wikimedia.org/wiki/File:View_of_the_Cathedral_facade_from_the_Baptistry_(Pisa).jpg",
+        "artist": "PaestumPaestum",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "wikiTitle": "Pisa Cathedral"
+      },
+      {
+        "src": "reference-images/ef78d5d5fd0c.jpg",
+        "label": "Pisa Baptistery",
+        "source": "https://commons.wikimedia.org/wiki/File:The_Baptistery_in_Pisa_Italy.jpg",
+        "artist": "PaestumPaestum",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "wikiTitle": "Pisa Baptistery"
+      }
+    ],
+    "02-01/0": [
+      {
+        "src": "reference-images/d0a482777351.jpg",
+        "label": "Palazzo Pitti",
+        "source": "https://commons.wikimedia.org/wiki/File:Palazzo_Pitti_nel_tardo_pomeriggio.jpg",
+        "artist": "Almaak",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "wikiTitle": "Palazzo Pitti"
+      },
+      {
+        "src": "reference-images/c37e5d406fbd.jpg",
+        "label": "椅中聖母",
+        "source": "https://commons.wikimedia.org/wiki/File:Raphael_Madonna_della_seggiola.jpg",
+        "artist": "Raphael",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Madonna della Seggiola"
+      }
+    ],
+    "02-01/1": [
+      {
+        "src": "reference-images/367eddde9b8e.jpg",
+        "label": "Basilica of Santa Croce, Florence",
+        "source": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_la_Santa_Cruz,_Florencia,_Italia,_2022-09-18,_DD_95.jpg",
+        "artist": "Diego Delso",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Basilica of Santa Croce, Florence"
+      }
+    ],
+    "02-01/2": [
+      {
+        "src": "reference-images/db61df10d167.jpg",
+        "label": "Arno",
+        "source": "https://commons.wikimedia.org/wiki/File:FirenzeDec092023_01.jpg",
+        "artist": "Hagai Agmon-Snir حچاي اچمون-سنير חגי אגמון-שניר",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Arno"
+      }
+    ],
+    "02-02/0": [
+      {
+        "src": "reference-images/6fa0cfb29d05.jpg",
+        "label": "Palazzo Vecchio",
+        "source": "https://commons.wikimedia.org/wiki/File:Piazza_della_signoria,_palazzo_vecchio,_veduta_01.jpg",
+        "artist": "Francesco Bini",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Palazzo Vecchio"
+      }
+    ],
+    "02-02/2": [
+      {
+        "src": "reference-images/9b32335d3791.jpg",
+        "label": "San Michele in Foro",
+        "source": "https://commons.wikimedia.org/wiki/File:Lucca_San_Michele_in_Foro_01.jpg",
+        "artist": "Spike",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "San Michele in Foro"
+      },
+      {
+        "src": "reference-images/b0cf4122af39.jpg",
+        "label": "Via del Fosso",
+        "source": "https://commons.wikimedia.org/wiki/File:Lucca_Italy_Via_del_Fosso.PNG",
+        "artist": "pt:Usuário:nemracc",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "wikiTitle": "Via del Fosso"
+      }
+    ],
+    "02-02/3": [
+      {
+        "src": "reference-images/48135c4b5534.jpg",
+        "label": "Walls of Lucca",
+        "source": "https://commons.wikimedia.org/wiki/File:Lucca.city_walls01.jpg",
+        "artist": "No machine-readable author provided. JoJan assumed (based on copyright claims).",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+        "wikiTitle": "Walls of Lucca"
+      }
+    ],
+    "02-03/2": [
+      {
+        "src": "reference-images/b95f8fdb1eab.jpg",
+        "label": "Sant'Agostino, Rome",
+        "source": "https://commons.wikimedia.org/wiki/File:Sant%27_Agostino_-_esterno.jpg",
+        "artist": "Labicanense",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "wikiTitle": "Sant'Agostino, Rome"
+      },
+      {
+        "src": "reference-images/8b6180b07be3.jpg",
+        "label": "Arco dei Banchi",
+        "source": "https://commons.wikimedia.org/wiki/File:Arco_dei_Banchi.jpg",
+        "artist": "Fiat 500e",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "wikiTitle": "Arco dei Banchi"
+      }
+    ],
+    "02-03/3": [
+      {
+        "src": "reference-images/350b337bbeb9.jpg",
+        "label": "Fontana dei Quattro Fiumi",
+        "source": "https://commons.wikimedia.org/wiki/File:Obelisco_Fontana_dei_Fiumi_Piazza_Navona_Roma.jpg",
+        "artist": "This Photo was taken by Wolfgang Moroder.  \n\nFeel free to use my photos, but please mention me as the author and send me a  message. \n\n\n\nThis image is not in the public domain. Please respect the copyright protection. It may only be used according to the rules mentioned here. This specifically excludes use in social media, if applicable terms of the licenses listed here are not appropriate.\n\n\n\nPlease do not upload an updated image here without consultation with the Author. The author would like to make corrections only at his own source. This ensures that the changes are preserved.Please if you think that any changes should be required, please inform the author.Otherwise you can upload a new image with a new name. Please use one of the templates derivative or extract.",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "wikiTitle": "Fontana dei Quattro Fiumi"
+      },
+      {
+        "src": "reference-images/3f687f1c4775.jpg",
+        "label": "The Calling of Saint Matthew",
+        "source": "https://commons.wikimedia.org/wiki/File:Caravaggio_%E2%80%94_The_Calling_of_Saint_Matthew.jpg",
+        "artist": "Gleb Simonov",
+        "license": "CC0",
+        "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+        "wikiTitle": "The Calling of Saint Matthew"
+      },
+      {
+        "src": "reference-images/31b195f4533a.jpg",
+        "label": "San Luigi dei Francesi",
+        "source": "https://commons.wikimedia.org/wiki/File:%C3%89glise_San_Luigi_Francesi_-_Rome_(IT62)_-_2021-08-28_-_2.jpg",
+        "artist": "Chabe01",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "San Luigi dei Francesi"
+      }
+    ],
+    "02-03/5": [
+      {
+        "src": "reference-images/aec8544385fd.jpg",
+        "label": "Temple of Hadrian",
+        "source": "https://commons.wikimedia.org/wiki/File:Tempio_di_Adriano_-_esterno.jpg",
+        "artist": "Labicanense",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "wikiTitle": "Temple of Hadrian"
+      },
+      {
+        "src": "reference-images/b73a13edf5c5.jpg",
+        "label": "Obelisk of Montecitorio",
+        "source": "https://commons.wikimedia.org/wiki/File:Egyptian_Obelisk_Solare,_Psammeticus_II,_Heliopolis,_Taken_by_Augustus_in_10_BC_(48424248527).jpg",
+        "artist": "Gary Todd from Xinzheng, China",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Obelisk of Montecitorio"
+      }
+    ],
+    "02-04/1": [
+      {
+        "src": "reference-images/f4ce87b554f0.jpg",
+        "label": "Hadrian's Villa",
+        "source": "https://commons.wikimedia.org/wiki/File:Villa_Hadriana_(Villa_Adriana_Tivoli)_1000_03.jpg",
+        "artist": "FrDr",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Hadrian's Villa"
+      }
+    ],
+    "02-04/4": [
+      {
+        "src": "reference-images/bb24b13205cc.jpg",
+        "label": "聖德蕾莎的狂喜",
+        "source": "https://commons.wikimedia.org/wiki/File:Ecstasy_of_St._Teresa_HDR.jpg",
+        "artist": "Livioandronico2013",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Ecstasy of Saint Teresa"
+      }
+    ],
+    "02-05/0": [
+      {
+        "src": "reference-images/d9cee65b5b49.jpg",
+        "label": "Piazza del Popolo",
+        "source": "https://commons.wikimedia.org/wiki/File:Piazza_del_Popolo,_Roma_(Rome).jpg",
+        "artist": "Apaleutos25",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Piazza del Popolo"
+      },
+      {
+        "src": "reference-images/b29688dcfbf0.jpg",
+        "label": "Santa Maria del Popolo",
+        "source": "https://commons.wikimedia.org/wiki/File:20140803_Basilica_of_Santa_Maria_del_Popolo_Rome_0191.jpg",
+        "artist": "Jakub Hałun",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Santa Maria del Popolo"
+      }
+    ],
+    "02-05/1": [
+      {
+        "src": "reference-images/aa4c371932ef.jpg",
+        "label": "Spanish Steps",
+        "source": "https://commons.wikimedia.org/wiki/File:Piazza_di_Spagna_(Rome)_0004.jpg",
+        "artist": "Arnaud 25",
+        "license": "CC BY-SA 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+        "wikiTitle": "Spanish Steps"
+      },
+      {
+        "src": "reference-images/f1988c5d1734.jpg",
+        "label": "Fontana della Barcaccia",
+        "source": "https://commons.wikimedia.org/wiki/File:Barcaccia_e_scalinata.jpg",
+        "artist": "WikiRomaWiki",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Fontana della Barcaccia"
+      }
+    ],
+    "02-05/2": [
+      {
+        "src": "reference-images/fa53c38c1331.jpg",
+        "label": "阿波羅與達芙妮",
+        "source": "https://commons.wikimedia.org/wiki/File:Apollo_and_Daphne_(Bernini)_(cropped).jpg",
+        "artist": "Architas",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Apollo and Daphne (Bernini)"
+      },
+      {
+        "src": "reference-images/84d52a7eb0a6.jpg",
+        "label": "普洛塞庇娜被劫",
+        "source": "https://commons.wikimedia.org/wiki/File:Rape_of_Prosepina_September_2015-3a.jpg",
+        "artist": "Alvesgaspar",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "The Rape of Proserpina"
+      }
+    ],
+    "02-05/3": [
+      {
+        "src": "reference-images/53b84bb722e3.jpg",
+        "label": "病中的酒神",
+        "source": "https://commons.wikimedia.org/wiki/File:Young_Sick_Bacchus-Caravaggio_(1593).jpg",
+        "artist": "Caravaggio",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Young Sick Bacchus"
+      },
+      {
+        "src": "reference-images/a7777b9fe5a4.jpg",
+        "label": "抱獨角獸的女子",
+        "source": "https://commons.wikimedia.org/wiki/File:Raffaello_Sanzio_-_Lady_with_unicorn.jpg",
+        "artist": "Raphael",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Portrait of a Young Woman with a Unicorn"
+      }
+    ],
+    "02-05/4": [
+      {
+        "src": "reference-images/565107c55f61.jpg",
+        "label": "Pyramid of Cestius",
+        "source": "https://commons.wikimedia.org/wiki/File:Piramide_Cestia.jpg",
+        "artist": "Livioandronico2013",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Pyramid of Cestius"
+      }
+    ],
+    "02-05/5": [
+      {
+        "src": "reference-images/824d823d52bf.jpg",
+        "label": "San Giovanni a Porta Latina",
+        "source": "https://commons.wikimedia.org/wiki/File:DSC09436_MSan_Giovanni_a_Porta_Latina_(Rome).jpg",
+        "artist": "Ardeatino",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "wikiTitle": "San Giovanni a Porta Latina"
+      }
+    ],
+    "02-06/0": [
+      {
+        "src": "reference-images/911d342e4aec.jpg",
+        "label": "Tempietto",
+        "source": "https://commons.wikimedia.org/wiki/File:Tempietto_und_Glockenturm_von_San_Pietro_in_Montorio.jpg",
+        "artist": "JTSH26",
+        "license": "CC BY-SA 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+        "wikiTitle": "Tempietto"
+      }
+    ],
+    "02-06/1": [
+      {
+        "src": "reference-images/351b7be83c41.jpg",
+        "label": "Fontana dell'Acqua Paola",
+        "source": "https://commons.wikimedia.org/wiki/File:Fontanone_dell%27Acqua_Paola.jpg",
+        "artist": "Labicanense",
+        "license": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+        "wikiTitle": "Fontana dell'Acqua Paola"
+      }
+    ],
+    "02-06/2": [
+      {
+        "src": "reference-images/9ba9a58faeca.jpg",
+        "label": "Janiculum",
+        "source": "https://commons.wikimedia.org/wiki/File:Janiculum.jpg",
+        "artist": "",
+        "license": "Public domain",
+        "licenseUrl": "",
+        "wikiTitle": "Janiculum"
+      }
+    ]
+  },
+  "missing": []
+}
