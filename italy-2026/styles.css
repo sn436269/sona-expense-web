@@ -53,3 +53,12 @@ a.map-button{display:inline-flex;align-items:center;text-decoration:none}
 .slot-reference a{display:block;flex:0 0 var(--reference-width);width:var(--reference-width);height:var(--reference-height);border:1px solid var(--line);border-radius:2px;background:var(--paper);overflow:hidden}
 .slot-reference img{display:block;width:100%;height:100%;object-fit:contain}
 @media print{.slot-reference{display:none!important}}
+
+/* Clear album-management feedback and recoverable removal controls. */
+.key-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:8px 0}
+#key-status,#file-selection,#upload-status{white-space:pre-wrap;overflow-wrap:anywhere}
+#key-status{padding:8px 10px;background:var(--sand);border-left:3px solid var(--green)}
+#upload-results{padding-left:20px;font-size:14px;overflow-wrap:anywhere}
+#album-notice{padding:10px 14px;background:var(--sand);border-left:3px solid var(--green)}
+.photo-item{min-width:0;position:relative}.photo-item .photo-thumb{width:100%}
+.photo-delete{display:block;width:100%;margin:5px 0 0;padding:6px 9px;border:1px solid var(--red);border-radius:2px;background:white;color:var(--red);font-size:14px}
