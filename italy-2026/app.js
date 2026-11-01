@@ -96,7 +96,7 @@
   });
   $('#save-service').onclick=async()=>{const next=validService($('#service-url').value);if(!next){status.textContent='請輸入有效的 HTTPS 相簿網址。';return;}service=next;try{localStorage.setItem('italy-service',next);}catch(_){} await refreshPhotos();status.textContent='已更新照片連線。';};
   function uploadFile(file,index,total){return new Promise((resolve,reject)=>{
-    const q=new URLSearchParams({spotId:selected,name:file.name,caption:$('#photo-caption').value});const xhr=new XMLHttpRequest();xhr.open('POST',api('/api/photos?'+q));xhr.timeout=240000;xhr.setRequestHeader('Authorization','Bearer '+savedKey());xhr.setRequestHeader('Content-Type','application/octet-stream');
+    const q=new URLSearchParams({spotId:selected,name:file.name,caption:$('#photo-caption').value});const xhr=new XMLHttpRequest();xhr.open('POST',api('/api/photos?'+q));xhr.timeout=240000;xhr.setRequestHeader('Authorization','Bearer '+encodeURIComponent(savedKey()));xhr.setRequestHeader('Content-Type','application/octet-stream');
     xhr.upload.onprogress=ev=>{if(ev.lengthComputable){$('#upload-progress').value=Math.round(((index+ev.loaded/ev.total)/total)*100);status.textContent=`正在保存第 ${index+1} / ${total} 張照片…`;}};
     xhr.onload=()=>{let body;try{body=JSON.parse(xhr.responseText);}catch(_){reject(new Error('照片尚未確認保存，請重試。'));return;}if(xhr.status>=200&&xhr.status<300&&body.backedUp)resolve(body);else reject(new Error(body.error||'照片尚未保存成功，請重試。'));};
     xhr.onerror=()=>reject(new Error('連線中斷。已成功的照片會保留，請重新選取未完成的照片。'));xhr.ontimeout=()=>reject(new Error('照片處理逾時，請稍後重新整理相簿確認。'));xhr.send(file);
@@ -106,7 +106,7 @@
     if(!selected||!files.length){status.textContent='請先選擇要上傳的照片。';return;}
     if(files.some(f=>f.size>45*1024*1024)){status.textContent='有照片超過 45 MB，請換一張較小的照片。';return;}
     uploading=true;$('#upload-submit').disabled=true;$('#photo-files').disabled=true;let done=0;
-    try {await request('/api/auth',{method:'POST',headers:{Authorization:'Bearer '+savedKey()}});$('#upload-progress').hidden=false;
+    try {await request('/api/auth',{method:'POST',headers:{Authorization:'Bearer '+encodeURIComponent(savedKey())}});$('#upload-progress').hidden=false;
       for(let i=0;i<files.length;i++){await uploadFile(files[i],i,files.length);done++;}
       status.textContent=`${done} 張照片已加入相簿，原始檔也已備份至電腦。`;$('#photo-files').value='';$('#photo-caption').value='';await refreshPhotos();
     }catch(err){status.textContent=(done?`已保存 ${done} 張。`:'')+(err.message||'上傳失敗，請重試。');await refreshPhotos();}
@@ -115,7 +115,7 @@
   $('#upload-dialog').addEventListener('cancel',ev=>{if(uploading)ev.preventDefault();});
   $('#upload-dialog .close-dialog').onclick=()=>{if(uploading){status.textContent='正在保存照片，請等待這一批完成。';return;}$('#upload-dialog').close();};
   function openPhoto(p){openedPhoto=p.id;$('#photo-title').textContent=p.title;$('#photo-full').src=api('/media/display/'+p.id+'.jpg');$('#photo-full').alt=p.title;$('#photo-description').textContent=p.caption;$('#archive-photo').hidden=!savedKey();$('#photo-dialog').showModal();}
-  $('#archive-photo').onclick=async()=>{try{await request('/api/photos/'+openedPhoto+'/archive',{method:'POST',headers:{Authorization:'Bearer '+savedKey()}});$('#photo-dialog').close();await refreshPhotos();}catch(err){$('#photo-description').textContent=err.message;}};
+  $('#archive-photo').onclick=async()=>{try{await request('/api/photos/'+openedPhoto+'/archive',{method:'POST',headers:{Authorization:'Bearer '+encodeURIComponent(savedKey())}});$('#photo-dialog').close();await refreshPhotos();}catch(err){$('#photo-description').textContent=err.message;}};
   Promise.all([fetch('places.json',{cache:'no-store'}).then(r=>r.json()),fetch('photo-service.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({}))]).then(([catalog,config])=>{
     places=catalog.places;let custom='';try{custom=localStorage.getItem('italy-service')||'';}catch(_){}service=validService(custom)||validService(config.baseUrl);filterAlbums();refreshPhotos();
   }).catch(()=>{$('#connection-status').textContent='相簿資料暫時無法讀取，請重新整理網頁。';});
