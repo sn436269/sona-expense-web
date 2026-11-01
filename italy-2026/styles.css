@@ -61,4 +61,4 @@ a.map-button{display:inline-flex;align-items:center;text-decoration:none}
 #upload-results{padding-left:20px;font-size:14px;overflow-wrap:anywhere}
 #album-notice{padding:10px 14px;background:var(--sand);border-left:3px solid var(--green)}
 .photo-item{min-width:0;position:relative}.photo-item .photo-thumb{width:100%}
-.photo-delete{display:block;width:100%;margin:5px 0 0;padding:6px 9px;border:1px solid var(--red);border-radius:2px;background:white;color:var(--red);font-size:14px}
+.photo-delete{position:absolute;z-index:2;top:4px;right:4px;display:grid;place-items:center;width:36px;height:36px;margin:0;padding:0;border:1px solid var(--red);border-radius:4px;background:rgba(255,255,255,.96);color:var(--red);font:28px/1 var(--sans);box-shadow:0 1px 5px #0002;touch-action:manipulation}.photo-delete:hover{background:var(--red);color:white}

@@ -56,7 +56,7 @@
     $$('[data-photos]').forEach(grid=>{
       const list=photos.filter(p=>p.spotId===grid.dataset.photos);grid.replaceChildren();
       grid.nextElementSibling.hidden=list.length>0;
-      list.forEach(p=>{const b=document.createElement('button');b.type='button';b.className='photo-thumb';b.setAttribute('aria-label','放大 '+p.title);const im=document.createElement('img');im.src=api('/media/thumb/'+p.id+'.jpg');im.loading='lazy';im.alt=p.title;im.width=640;im.height=640;b.append(im);b.onclick=()=>openPhoto(p);const item=document.createElement('div');item.className='photo-item';item.append(b);if(isManager()){const del=document.createElement('button');del.type='button';del.className='photo-delete';del.textContent='刪除';del.setAttribute('aria-label','刪除 '+p.title+'（保留電腦備份）');del.onclick=()=>removePhoto(p);item.append(del);}grid.append(item);});
+      list.forEach(p=>{const b=document.createElement('button');b.type='button';b.className='photo-thumb';b.setAttribute('aria-label','放大 '+p.title);const im=document.createElement('img');im.src=api('/media/thumb/'+p.id+'.jpg');im.loading='lazy';im.alt=p.title;im.width=640;im.height=640;b.append(im);b.onclick=()=>openPhoto(p);const item=document.createElement('div');item.className='photo-item';item.append(b);if(isManager()){const del=document.createElement('button');del.type='button';del.className='photo-delete';del.textContent='×';del.title='刪除照片';del.setAttribute('aria-label','刪除 '+p.title+'（保留電腦備份）');del.onclick=()=>removePhoto(p);item.append(del);}grid.append(item);});
     });
   }
   async function refreshPhotos(){
