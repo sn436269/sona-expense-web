@@ -42,7 +42,7 @@
     if(fragment.has('manage')) {manageFromLink=true;sessionStorage.setItem('italy-owner',fragment.get('manage')); history.replaceState(null,'',location.pathname+location.search+'#albums');}
     keyInput.value=sessionStorage.getItem('italy-owner')||'';
   } catch (_) {}
-  function savedKey(){return keyInput.value.trim();}
+  function savedKey(){return keyInput.value.trim().normalize('NFKC');}
   function isManager(){return !!verifiedKey && verifiedKey===savedKey();}
   function setKey(){try{sessionStorage.setItem('italy-owner',savedKey());}catch(_){} }
   function validService(value) {try{const u=new URL(value);return (u.protocol==='https:' || ['127.0.0.1','localhost'].includes(u.hostname)) && !u.username && !u.password ? u.origin : '';}catch(_){return '';}}
@@ -50,7 +50,7 @@
   async function request(path,options={}) {
     if(!service)throw new Error('照片相簿尚未連線，請保持相簿電腦在線後再試。');
     const r=await fetch(api(path),{...options,signal:AbortSignal.timeout(20000)});
-    const body=await r.json();if(!r.ok){const err=new Error(r.status===401?'管理碼不正確，請確認大小寫與全形、半形。':(body.error||'照片相簿暫時無法連線，請稍後重試。'));err.status=r.status;throw err;}return body;
+    const body=await r.json();if(!r.ok){const err=new Error(r.status===401?'管理碼不正確，請確認大小寫。全形、半形都可以。':(body.error||'照片相簿暫時無法連線，請稍後重試。'));err.status=r.status;throw err;}return body;
   }
   function renderPhotos(){
     $$('[data-photos]').forEach(grid=>{
@@ -81,7 +81,7 @@
     selected=id||'';const p=places.find(p=>p.id===id);
     $('#upload-title').textContent=p?'新增照片':'相簿管理';$('#upload-place').textContent=p?`${p.city} · ${p.title}${p.artist?' · '+p.artist:''}`:'先按「驗證管理碼」。成功後，可上傳照片，也可點照片旁的「刪除」移除不需要的照片。';
     $('#photo-files').closest('label').hidden=!p;$('#photo-caption').closest('label').hidden=!p;$('#upload-submit').hidden=!p;$('.upload-note').hidden=!p;
-    status.textContent='';$('#upload-results').replaceChildren();$('#file-selection').textContent=$('#photo-files').files.length?`已選擇 ${$('#photo-files').files.length} 張，尚未上傳。`:'尚未選擇照片。';$('#key-status').textContent=isManager()?'管理碼正確，已啟用相簿管理。':'尚未驗證管理碼；大小寫與全形、半形須一致。';$('#upload-progress').hidden=true;$('#service-url').value=service;$('#upload-dialog').showModal();
+    status.textContent='';$('#upload-results').replaceChildren();$('#file-selection').textContent=$('#photo-files').files.length?`已選擇 ${$('#photo-files').files.length} 張，尚未上傳。`:'尚未選擇照片。';$('#key-status').textContent=isManager()?'管理碼正確，已啟用相簿管理。':'尚未驗證管理碼；只區分大小寫，全形、半形都可以。';$('#upload-progress').hidden=true;$('#service-url').value=service;$('#upload-dialog').showModal();
   }
   $('#manage').onclick=()=>openUpload(''); keyInput.addEventListener('change',setKey);
   keyInput.addEventListener('input',()=>{verifiedKey='';$('#key-status').textContent='管理碼已變更，請按「驗證管理碼」。';$('#manage').textContent='相簿管理';renderPhotos();});
