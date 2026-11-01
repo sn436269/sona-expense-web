@@ -134,6 +134,6 @@
   }
   $('#archive-photo').onclick=()=>{const p=photos.find(p=>p.id===openedPhoto);if(p)removePhoto(p);};
   Promise.all([fetch('places.json',{cache:'no-store'}).then(r=>r.json()),fetch('photo-service.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({}))]).then(([catalog,config])=>{
-    places=catalog.places;let custom='';try{custom=localStorage.getItem('italy-service')||'';}catch(_){}service=validService(custom)||validService(config.baseUrl);filterAlbums();refreshPhotos().then(async()=>{if($('#connection-status').classList.contains('offline')&&custom&&validService(config.baseUrl)!==service){service=validService(config.baseUrl);try{localStorage.removeItem('italy-service');}catch(_){}await refreshPhotos();}if(manageFromLink){openUpload('');await verifyKey();}});
+    places=catalog.places;let custom='';try{custom=localStorage.getItem('italy-service')||'';}catch(_){}service=validService(custom)||validService(config.baseUrl);filterAlbums();refreshPhotos().then(async()=>{if($('#connection-status').classList.contains('offline')&&custom&&validService(config.baseUrl)!==service){service=validService(config.baseUrl);try{localStorage.removeItem('italy-service');}catch(_){}await refreshPhotos();}if(savedKey()){if(manageFromLink)openUpload('');await verifyKey();}});
   }).catch(()=>{$('#connection-status').textContent='相簿資料暫時無法讀取，請重新整理網頁。';});
 })();
