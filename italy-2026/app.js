@@ -35,11 +35,11 @@
   $$('dialog').forEach(d=>d.addEventListener('click',ev=>{if(ev.target===d){const r=d.getBoundingClientRect();if(ev.clientX<r.left||ev.clientX>r.right||ev.clientY<r.top||ev.clientY>r.bottom)d.close();}}));
   filterDays();followHash();
 
-  let places=[], photos=[], service='', selected='', openedPhoto='', uploading=false, verifiedKey='';
+  let places=[], photos=[], service='', selected='', openedPhoto='', uploading=false, verifiedKey='', manageFromLink=false;
   const keyInput=$('#owner-key'), form=$('#upload-form'), status=$('#upload-status');
   try {
     const fragment=new URLSearchParams(location.hash.slice(1));
-    if(fragment.has('manage')) {sessionStorage.setItem('italy-owner',fragment.get('manage')); history.replaceState(null,'',location.pathname+location.search+'#albums');}
+    if(fragment.has('manage')) {manageFromLink=true;sessionStorage.setItem('italy-owner',fragment.get('manage')); history.replaceState(null,'',location.pathname+location.search+'#albums');}
     keyInput.value=sessionStorage.getItem('italy-owner')||'';
   } catch (_) {}
   function savedKey(){return keyInput.value.trim();}
@@ -134,6 +134,6 @@
   }
   $('#archive-photo').onclick=()=>{const p=photos.find(p=>p.id===openedPhoto);if(p)removePhoto(p);};
   Promise.all([fetch('places.json',{cache:'no-store'}).then(r=>r.json()),fetch('photo-service.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({}))]).then(([catalog,config])=>{
-    places=catalog.places;let custom='';try{custom=localStorage.getItem('italy-service')||'';}catch(_){}service=validService(custom)||validService(config.baseUrl);filterAlbums();refreshPhotos().then(async()=>{if($('#connection-status').classList.contains('offline')&&custom&&validService(config.baseUrl)!==service){service=validService(config.baseUrl);try{localStorage.removeItem('italy-service');}catch(_){}await refreshPhotos();}});
+    places=catalog.places;let custom='';try{custom=localStorage.getItem('italy-service')||'';}catch(_){}service=validService(custom)||validService(config.baseUrl);filterAlbums();refreshPhotos().then(async()=>{if($('#connection-status').classList.contains('offline')&&custom&&validService(config.baseUrl)!==service){service=validService(config.baseUrl);try{localStorage.removeItem('italy-service');}catch(_){}await refreshPhotos();}if(manageFromLink){openUpload('');await verifyKey();}});
   }).catch(()=>{$('#connection-status').textContent='相簿資料暫時無法讀取，請重新整理網頁。';});
 })();
