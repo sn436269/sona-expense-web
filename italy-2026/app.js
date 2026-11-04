@@ -102,7 +102,7 @@
       const empty=grid.parentElement.querySelector('.photo-empty');if(empty)empty.hidden=list.length>0;
       let count=grid.parentElement.querySelector('.photo-count');if(!count){count=document.createElement('p');count.className='photo-count';grid.before(count);}count.textContent=list.length?`${list.length} 張照片`:'';
     });
-    const pending=photos.filter(p=>p.spotId==='pending'||!places.some(x=>x.id===p.spotId));
+    const pending=photos.filter(p=>p.spotId==='pending');
     $('#pending-count').textContent=`${pending.length} 張照片`;
     $('#pending-help').textContent=isManager()?'選擇城市、景點／美術館；若是作品，再選作品名稱與作者，按「移入這個相簿」。':'驗證相簿管理碼後，可用每張照片下方的選單分類，或點右上角 × 移除照片。';
     renderGrid($('#pending-grid'),pending,true);
