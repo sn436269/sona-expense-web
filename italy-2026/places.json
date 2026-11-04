@@ -1731,6 +1731,30 @@
       "artist": "吉安・洛倫佐・貝尼尼",
       "mapQuery": "Aeneas Anchises Ascanius Bernini, 羅馬, Italy",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Aeneas%20Anchises%20Ascanius%20Bernini%2C%20%E7%BE%85%E9%A6%AC%2C%20Italy"
+    },
+    {
+      "id": "songshan-airport",
+      "city": "台北",
+      "title": "台北松山機場",
+      "localName": "Taipei Songshan Airport",
+      "date": "01-23",
+      "kind": "景點與建築",
+      "parent": null,
+      "artist": "",
+      "mapQuery": "Taipei Songshan Airport, Taiwan",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Taipei%20Songshan%20Airport%2C%20Taiwan"
+    },
+    {
+      "id": "chengdu-transit",
+      "city": "四川",
+      "title": "成都機場與轉機",
+      "localName": "Chengdu airport transit",
+      "date": "01-23",
+      "kind": "景點與建築",
+      "parent": null,
+      "artist": "",
+      "mapQuery": "Chengdu airport, Sichuan, China",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Chengdu%20airport%2C%20Sichuan%2C%20China"
     }
   ]
 }
