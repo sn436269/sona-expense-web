@@ -133,18 +133,6 @@
       "staticUrl": "photos/fc4b93f151b811454bb2547c.jpg"
     },
     {
-      "id": "f95c88adf972b102ee98e623",
-      "spotId": "pending",
-      "title": "待整理照片",
-      "caption": "",
-      "uploadedAt": "2026-11-02T22:08:00.649488+00:00",
-      "takenAt": "2026:01:25 14:37:17",
-      "width": 3648,
-      "height": 5472,
-      "originalName": "IMG_1957.JPG",
-      "staticUrl": "photos/f95c88adf972b102ee98e623.jpg"
-    },
-    {
       "id": "d84b2c5ab3887d27c6e859bc",
       "spotId": "pending",
       "title": "待整理照片",
@@ -179,18 +167,6 @@
       "height": 5472,
       "originalName": "IMG_1960.JPG",
       "staticUrl": "photos/a81ea35bac4b1687c03fc1c4.jpg"
-    },
-    {
-      "id": "6142113f27ef31e698e85394",
-      "spotId": "pending",
-      "title": "待整理照片",
-      "caption": "",
-      "uploadedAt": "2026-11-02T22:08:02.411166+00:00",
-      "takenAt": "2026:01:25 14:39:18",
-      "width": 3648,
-      "height": 5472,
-      "originalName": "IMG_1961.JPG",
-      "staticUrl": "photos/6142113f27ef31e698e85394.jpg"
     },
     {
       "id": "4807878c6aaeedc768dda2c2",
@@ -20018,8 +19994,8 @@
     },
     {
       "id": "0965c1cae1e19351fe5ba845",
-      "spotId": "baptistery",
-      "title": "聖若望洗禮堂",
+      "spotId": "duomo",
+      "title": "聖母百花大教堂",
       "caption": "",
       "uploadedAt": "2026-11-02T22:20:35.756966+00:00",
       "takenAt": "2026:01:30 13:26:15",
@@ -20245,18 +20221,6 @@
       "staticUrl": "photos/b050bbf44390b80ac80a9886.jpg"
     },
     {
-      "id": "5abe0eb7d97da162f4bd9640",
-      "spotId": "baptistery",
-      "title": "聖若望洗禮堂",
-      "caption": "",
-      "uploadedAt": "2026-11-02T22:20:42.427336+00:00",
-      "takenAt": "2026:01:30 13:29:01",
-      "width": 3648,
-      "height": 5472,
-      "originalName": "IMG_3131.JPG",
-      "staticUrl": "photos/5abe0eb7d97da162f4bd9640.jpg"
-    },
-    {
       "id": "b796e3ad4adcba5aa2aa234b",
       "spotId": "colosseum",
       "title": "羅馬競技場",
@@ -20270,8 +20234,8 @@
     },
     {
       "id": "6cfc96d6798edb292b838d43",
-      "spotId": "baptistery",
-      "title": "聖若望洗禮堂",
+      "spotId": "duomo",
+      "title": "聖母百花大教堂",
       "caption": "",
       "uploadedAt": "2026-11-02T22:20:42.728727+00:00",
       "takenAt": "2026:01:30 13:29:18",
@@ -26522,8 +26486,8 @@
     },
     {
       "id": "4aff190a45d758e912014b0c",
-      "spotId": "pitti",
-      "title": "彼提宮",
+      "spotId": "pisa-tower",
+      "title": "比薩斜塔",
       "caption": "",
       "uploadedAt": "2026-11-02T22:24:51.738891+00:00",
       "takenAt": "2026:02:01 00:31:55",
