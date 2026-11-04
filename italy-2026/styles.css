@@ -65,3 +65,14 @@ a.map-button{display:inline-flex;align-items:center;text-decoration:none}
 
 /* Compact place and artwork actions. */
 .album-actions{gap:5px}.album-actions .map-button,.album-actions .upload-button{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:4px 8px;font-size:11px;line-height:1.4;gap:3px}
+
+/* Imported photos keep the existing compact album layout. */
+.photo-count{font-size:12px;margin:5px 0;color:var(--green)}
+.photos-more{display:block;margin:6px 0 0}
+.pending-grid{grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.classify-controls{display:grid;gap:5px;margin:6px 0 0;min-width:0}
+.classify-controls select{width:100%;min-width:0;font-size:12px;padding:7px 5px;min-height:34px;text-overflow:ellipsis}
+.classify-controls button{font-size:12px;padding:6px 8px;min-height:32px}
+.classify-controls p{font-size:12px;margin:0;overflow-wrap:anywhere}
+#photo-classify{margin:10px 0}
+@media(max-width:560px){.pending-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.classify-controls select{font-size:11px}}

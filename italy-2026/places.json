@@ -1611,6 +1611,126 @@
       "artist": "",
       "mapQuery": "Teatro romano Fiesole, Italy",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=Teatro%20romano%20Fiesole%2C%20Italy"
+    },
+    {
+      "id": "bargello",
+      "city": "佛羅倫斯",
+      "title": "巴傑羅國家博物館",
+      "localName": "Museo Nazionale del Bargello",
+      "date": "",
+      "kind": "景點與建築",
+      "parent": null,
+      "artist": "",
+      "mapQuery": "Museo Nazionale del Bargello, 佛羅倫斯, Italy",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Museo%20Nazionale%20del%20Bargello%2C%20%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%2C%20Italy"
+    },
+    {
+      "id": "medici-chapels",
+      "city": "佛羅倫斯",
+      "title": "美第奇禮拜堂",
+      "localName": "Museo delle Cappelle Medicee",
+      "date": "",
+      "kind": "景點與建築",
+      "parent": null,
+      "artist": "",
+      "mapQuery": "Museo delle Cappelle Medicee, 佛羅倫斯, Italy",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Museo%20delle%20Cappelle%20Medicee%2C%20%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%2C%20Italy"
+    },
+    {
+      "id": "fiesole-museum",
+      "city": "菲耶索萊",
+      "title": "菲耶索萊考古博物館",
+      "localName": "Museo Civico Archeologico di Fiesole",
+      "date": "",
+      "kind": "景點與建築",
+      "parent": null,
+      "artist": "",
+      "mapQuery": "Museo Civico Archeologico di Fiesole, 菲耶索萊, Italy",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Museo%20Civico%20Archeologico%20di%20Fiesole%2C%20%E8%8F%B2%E8%80%B6%E7%B4%A2%E8%90%8A%2C%20Italy"
+    },
+    {
+      "id": "michelangelo-square",
+      "city": "佛羅倫斯",
+      "title": "米開朗基羅廣場",
+      "localName": "Piazzale Michelangelo",
+      "date": "",
+      "kind": "景點與建築",
+      "parent": null,
+      "artist": "",
+      "mapQuery": "Piazzale Michelangelo, 佛羅倫斯, Italy",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Piazzale%20Michelangelo%2C%20%E4%BD%9B%E7%BE%85%E5%80%AB%E6%96%AF%2C%20Italy"
+    },
+    {
+      "id": "siena-caterina",
+      "city": "錫耶納",
+      "title": "聖加大利納聖所",
+      "localName": "Santuario di Santa Caterina Siena",
+      "date": "",
+      "kind": "景點與建築",
+      "parent": null,
+      "artist": "",
+      "mapQuery": "Santuario di Santa Caterina Siena, 錫耶納, Italy",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Santuario%20di%20Santa%20Caterina%20Siena%2C%20%E9%8C%AB%E8%80%B6%E7%B4%8D%2C%20Italy"
+    },
+    {
+      "id": "lucca-san-martino",
+      "city": "盧卡",
+      "title": "盧卡主教座堂",
+      "localName": "Cattedrale di San Martino Lucca",
+      "date": "",
+      "kind": "景點與建築",
+      "parent": null,
+      "artist": "",
+      "mapQuery": "Cattedrale di San Martino Lucca, 盧卡, Italy",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Cattedrale%20di%20San%20Martino%20Lucca%2C%20%E7%9B%A7%E5%8D%A1%2C%20Italy"
+    },
+    {
+      "id": "lucca-city",
+      "city": "盧卡",
+      "title": "盧卡老城",
+      "localName": "Centro storico Lucca",
+      "date": "",
+      "kind": "景點與建築",
+      "parent": null,
+      "artist": "",
+      "mapQuery": "Centro storico Lucca, 盧卡, Italy",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Centro%20storico%20Lucca%2C%20%E7%9B%A7%E5%8D%A1%2C%20Italy"
+    },
+    {
+      "id": "borghese-david",
+      "city": "羅馬",
+      "title": "大衛",
+      "localName": "David Bernini",
+      "date": "",
+      "kind": "雕塑",
+      "parent": "borghese",
+      "artist": "吉安・洛倫佐・貝尼尼",
+      "mapQuery": "David Bernini, 羅馬, Italy",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=David%20Bernini%2C%20%E7%BE%85%E9%A6%AC%2C%20Italy"
+    },
+    {
+      "id": "borghese-pauline",
+      "city": "羅馬",
+      "title": "勝利的維納斯：寶琳娜・波拿巴",
+      "localName": "Paolina Borghese Canova",
+      "date": "",
+      "kind": "雕塑",
+      "parent": "borghese",
+      "artist": "安東尼奧・卡諾瓦",
+      "mapQuery": "Paolina Borghese Canova, 羅馬, Italy",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Paolina%20Borghese%20Canova%2C%20%E7%BE%85%E9%A6%AC%2C%20Italy"
+    },
+    {
+      "id": "borghese-aeneas",
+      "city": "羅馬",
+      "title": "埃涅阿斯、安喀塞斯與阿斯卡尼俄斯",
+      "localName": "Aeneas Anchises Ascanius Bernini",
+      "date": "",
+      "kind": "雕塑",
+      "parent": "borghese",
+      "artist": "吉安・洛倫佐・貝尼尼",
+      "mapQuery": "Aeneas Anchises Ascanius Bernini, 羅馬, Italy",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Aeneas%20Anchises%20Ascanius%20Bernini%2C%20%E7%BE%85%E9%A6%AC%2C%20Italy"
     }
   ]
 }

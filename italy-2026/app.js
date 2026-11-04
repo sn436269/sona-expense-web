@@ -35,7 +35,7 @@
   $$('dialog').forEach(d=>d.addEventListener('click',ev=>{if(ev.target===d){const r=d.getBoundingClientRect();if(ev.clientX<r.left||ev.clientX>r.right||ev.clientY<r.top||ev.clientY>r.bottom)d.close();}}));
   filterDays();followHash();
 
-  let places=[], photos=[], service='', selected='', openedPhoto='', uploading=false, verifiedKey='', manageFromLink=false;
+  let places=[], photos=[], staticPhotos=[], service='', selected='', openedPhoto='', uploading=false, verifiedKey='', manageFromLink=false;
   const keyInput=$('#owner-key'), form=$('#upload-form'), status=$('#upload-status');
   try {
     const fragment=new URLSearchParams(location.hash.slice(1));
@@ -49,19 +49,67 @@
   const api=(path)=>service+path;
   async function request(path,options={}) {
     if(!service)throw new Error('照片相簿尚未連線，請保持相簿電腦在線後再試。');
-    const r=await fetch(api(path),{...options,signal:AbortSignal.timeout(20000)});
+    const r=await fetch(api(path),{...options,signal:AbortSignal.timeout(8000)});
     const body=await r.json();if(!r.ok){const err=new Error(r.status===401?'管理碼不正確，請確認大小寫。全形、半形都可以。':(body.error||'照片相簿暫時無法連線，請稍後重試。'));err.status=r.status;throw err;}return body;
   }
+  const photoLimit=new Map();
+  let livePhotos=false;
+  const photoSource=(p,kind)=>livePhotos?api('/media/'+kind+'/'+p.id+'.jpg'):(p.staticUrl||'photos/'+p.id+'.jpg');
+  function picture(p,kind='thumb'){
+    const im=document.createElement('img');im.src=photoSource(p,kind);im.loading='lazy';im.alt=p.title;im.width=640;im.height=640;
+    im.onerror=()=>{im.onerror=null;im.src=p.staticUrl||'photos/'+p.id+'.jpg';};return im;
+  }
+  function moveControls(p){
+    const box=document.createElement('div');box.className='classify-controls';
+    const city=document.createElement('select'),venue=document.createElement('select'),work=document.createElement('select'),save=document.createElement('button'),msg=document.createElement('p');
+    city.setAttribute('aria-label','選擇城市');venue.setAttribute('aria-label','選擇景點或美術館');work.setAttribute('aria-label','選擇作品與作者');save.type='button';save.className='upload-button';save.textContent='移入這個相簿';msg.setAttribute('role','status');
+    const option=(select,value,label)=>{const o=document.createElement('option');o.value=value;o.textContent=label;select.append(o);};
+    option(city,'','選擇城市');[...new Set(places.map(p=>p.city))].forEach(c=>option(city,c,c));
+    function venues(){venue.replaceChildren();option(venue,'','選擇景點／美術館');places.filter(p=>p.city===city.value&&!p.parent).forEach(p=>option(venue,p.id,p.title));works();}
+    function works(){work.replaceChildren();option(work,'','景點照片／不指定作品');places.filter(p=>p.parent===venue.value).forEach(p=>option(work,p.id,p.title+(p.artist?' · '+p.artist:'')));work.disabled=work.options.length===1;save.disabled=!venue.value;}
+    city.onchange=venues;venue.onchange=works;venues();
+    const current=places.find(x=>x.id===p.spotId);
+    if(current){city.value=current.city;venues();venue.value=current.parent||current.id;works();if(current.parent)work.value=current.id;}
+    save.onclick=async()=>{
+      const target=work.value||venue.value;if(!target)return;save.disabled=true;msg.textContent='正在移動照片…';
+      try{await request('/api/photos/'+p.id+'/move',{method:'POST',headers:{Authorization:'Bearer '+encodeURIComponent(savedKey()),'Content-Type':'application/json'},body:JSON.stringify({spotId:target})});
+        p.spotId=target;p.title=places.find(x=>x.id===target)?.title||p.title;await refreshPhotos();msg.textContent='✓ 已移入 '+p.title;$('#album-notice').hidden=false;$('#album-notice').textContent='✓ 照片已移入「'+p.title+'」，原始備份保留。';
+      }catch(err){msg.textContent='移動未完成：'+err.message;}finally{save.disabled=false;}
+    };
+    box.append(city,venue,work,save,msg);return box;
+  }
   function renderPhotos(){
+    const renderGrid=(grid,list,pending=false)=>{
+      grid.replaceChildren();grid.parentElement.querySelector('.photos-more')?.remove();
+      const key=grid.dataset.photos||'pending',limit=photoLimit.get(key)|| (pending?24:12);
+      list.slice(0,limit).forEach(p=>{
+        const b=document.createElement('button');b.type='button';b.className='photo-thumb';b.setAttribute('aria-label','放大 '+p.title);b.append(picture(p));b.onclick=()=>openPhoto(p);
+        const item=document.createElement('div');item.className='photo-item';item.append(b);
+        if(isManager()){
+          const del=document.createElement('button');del.type='button';del.className='photo-delete';del.textContent='×';del.title='刪除照片';del.setAttribute('aria-label','刪除 '+p.title+'（保留電腦備份）');del.onclick=()=>removePhoto(p);item.append(del);
+          if(pending)item.append(moveControls(p));
+        }
+        grid.append(item);
+      });
+      if(list.length>limit){const more=document.createElement('button');more.className='text-button photos-more';more.textContent=`顯示更多照片（已顯示 ${Math.min(limit,list.length)} / ${list.length} 張）`;more.onclick=()=>{photoLimit.set(key,limit+24);renderGrid(grid,list,pending);};grid.after(more);}
+    };
     $$('[data-photos]').forEach(grid=>{
-      const list=photos.filter(p=>p.spotId===grid.dataset.photos);grid.replaceChildren();
-      grid.nextElementSibling.hidden=list.length>0;
-      list.forEach(p=>{const b=document.createElement('button');b.type='button';b.className='photo-thumb';b.setAttribute('aria-label','放大 '+p.title);const im=document.createElement('img');im.src=api('/media/thumb/'+p.id+'.jpg');im.loading='lazy';im.alt=p.title;im.width=640;im.height=640;b.append(im);b.onclick=()=>openPhoto(p);const item=document.createElement('div');item.className='photo-item';item.append(b);if(isManager()){const del=document.createElement('button');del.type='button';del.className='photo-delete';del.textContent='×';del.title='刪除照片';del.setAttribute('aria-label','刪除 '+p.title+'（保留電腦備份）');del.onclick=()=>removePhoto(p);item.append(del);}grid.append(item);});
+      const list=photos.filter(p=>p.spotId===grid.dataset.photos);renderGrid(grid,list);grid.nextElementSibling?.classList.contains('photo-empty')&&(grid.nextElementSibling.hidden=list.length>0);
+      const empty=grid.parentElement.querySelector('.photo-empty');if(empty)empty.hidden=list.length>0;
+      let count=grid.parentElement.querySelector('.photo-count');if(!count){count=document.createElement('p');count.className='photo-count';grid.before(count);}count.textContent=list.length?`${list.length} 張照片`:'';
     });
+    const pending=photos.filter(p=>p.spotId==='pending'||!places.some(x=>x.id===p.spotId));
+    $('#pending-count').textContent=`${pending.length} 張照片`;
+    $('#pending-help').textContent=isManager()?'選擇城市、景點／美術館；若是作品，再選作品名稱與作者，按「移入這個相簿」。':'驗證相簿管理碼後，可用每張照片下方的選單分類，或點右上角 × 移除照片。';
+    renderGrid($('#pending-grid'),pending,true);
   }
   async function refreshPhotos(){
-    try {const data=await request('/api/photos');photos=data.photos;renderPhotos();$('#connection-status').textContent=photos.length?`已收藏 ${photos.length} 張旅行照片。`:'相簿已準備好，選一個景點或作品，就能新增第一張照片。';$('#connection-status').classList.remove('offline');}
-    catch(_){$('#connection-status').textContent='照片相簿目前未連線。景點與作品仍可瀏覽；上傳照片時，請讓相簿電腦保持在線。';$('#connection-status').classList.add('offline');}
+    try{
+      const data=await request('/api/photos');photos=data.photos;livePhotos=true;renderPhotos();$('#connection-status').textContent=`已收藏 ${photos.length} 張旅行照片 · 手機與電腦共用相簿`;$('#connection-status').classList.remove('offline');
+    }catch(_){
+      livePhotos=false;if(!photos.length)photos=staticPhotos;renderPhotos();
+      $('#connection-status').textContent=photos.length?`已收藏 ${photos.length} 張旅行照片。照片可照常瀏覽；新增、刪除與分類時，請讓相簿電腦保持連線。`:'照片相簿目前未連線，請稍後重新整理。';$('#connection-status').classList.add('offline');
+    }
   }
   function filterAlbums(){
     const query=norm($('#album-search').value.trim()), city=$('#album-city').value, kind=$('#album-kind').value;let count=0;
@@ -125,7 +173,7 @@
   });
   $('#upload-dialog').addEventListener('cancel',ev=>{if(uploading)ev.preventDefault();});
   $('#upload-dialog .close-dialog').onclick=()=>{if(uploading){status.textContent='正在保存照片，請等待這一批完成。';return;}$('#upload-dialog').close();};
-  function openPhoto(p){openedPhoto=p.id;$('#photo-title').textContent=p.title;$('#photo-full').src=api('/media/display/'+p.id+'.jpg');$('#photo-full').alt=p.title;$('#photo-description').textContent=p.caption;$('#archive-photo').hidden=!isManager();$('#photo-dialog').showModal();}
+  function openPhoto(p){openedPhoto=p.id;$('#photo-title').textContent=p.title;$('#photo-full').src=photoSource(p,'display');$('#photo-full').onerror=()=>{$('#photo-full').onerror=null;$('#photo-full').src=p.staticUrl||'photos/'+p.id+'.jpg';};$('#photo-full').alt=p.title;$('#photo-description').textContent=p.caption;$('#archive-photo').hidden=!isManager();$('#photo-classify').replaceChildren();if(isManager())$('#photo-classify').append(moveControls(p));$('#photo-dialog').showModal();}
   async function removePhoto(p){
     if(!isManager()){openUpload(p.spotId);return;}
     if(!confirm('從網站相簿刪除這張照片？電腦原始備份會保留。'))return;
@@ -133,7 +181,9 @@
     catch(err){$('#album-notice').hidden=false;$('#album-notice').textContent='刪除未完成：'+err.message;if($('#photo-dialog').open)$('#photo-description').textContent=err.message;}
   }
   $('#archive-photo').onclick=()=>{const p=photos.find(p=>p.id===openedPhoto);if(p)removePhoto(p);};
-  Promise.all([fetch('places.json',{cache:'no-store'}).then(r=>r.json()),fetch('photo-service.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({}))]).then(([catalog,config])=>{
-    places=catalog.places;let custom='';try{custom=localStorage.getItem('italy-service')||'';}catch(_){}service=validService(custom)||validService(config.baseUrl);filterAlbums();refreshPhotos().then(async()=>{if($('#connection-status').classList.contains('offline')&&custom&&validService(config.baseUrl)!==service){service=validService(config.baseUrl);try{localStorage.removeItem('italy-service');}catch(_){}await refreshPhotos();}if(savedKey()){if(manageFromLink)openUpload('');await verifyKey();}});
+  Promise.all([fetch('places.json',{cache:'no-store'}).then(r=>r.json()),fetch('photo-service.json',{cache:'no-store'}).then(r=>r.json()).catch(()=>({})),fetch('photos.json',{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({}))]).then(([catalog,config,snapshot])=>{
+    places=catalog.places;staticPhotos=snapshot.photos||[];photos=staticPhotos;if(photos.length)renderPhotos();let custom='';try{custom=localStorage.getItem('italy-service')||'';}catch(_){}service=validService(custom)||validService(config.baseUrl);filterAlbums();refreshPhotos().then(async()=>{if($('#connection-status').classList.contains('offline')&&custom&&validService(config.baseUrl)!==service){service=validService(config.baseUrl);try{localStorage.removeItem('italy-service');}catch(_){}await refreshPhotos();}if(savedKey()){if(manageFromLink)openUpload('');await verifyKey();}});
   }).catch(()=>{$('#connection-status').textContent='相簿資料暫時無法讀取，請重新整理網頁。';});
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&places.length)refreshPhotos();});
+  setInterval(()=>{if(!document.hidden&&places.length&&!uploading)refreshPhotos();},60000);
 })();
