@@ -89,6 +89,10 @@
           const del=document.createElement('button');del.type='button';del.className='photo-delete';del.textContent='×';del.title='刪除照片';del.setAttribute('aria-label','刪除 '+p.title+'（保留電腦備份）');del.onclick=()=>removePhoto(p);item.append(del);
           if(pending)item.append(moveControls(p));
         }
+        if(pending){
+          const m=/^2026:(\d{2}):(\d{2})/.exec(p.takenAt||'');
+          if(m){const context=document.createElement('p');context.className='photo-context';const hint={'01-23':'台北／四川','01-24':'羅馬','01-25':'羅馬／梵蒂岡','01-26':'羅馬／佛羅倫斯','01-27':'佛羅倫斯','01-28':'佛羅倫斯','01-29':'佛羅倫斯／菲耶索萊','01-30':'佛羅倫斯／波隆那','01-31':'托斯卡尼一日遊','02-01':'佛羅倫斯','02-02':'佛羅倫斯／盧卡','02-03':'佛羅倫斯／羅馬','02-04':'羅馬／蒂沃利','02-05':'羅馬','02-06':'羅馬'}[m[1]+'-'+m[2]]||'';context.textContent=Number(m[1])+'/'+Number(m[2])+(hint?' · '+hint:'');item.insertBefore(context,item.querySelector('.classify-controls'));}
+        }
         grid.append(item);
       });
       if(list.length>limit){const more=document.createElement('button');more.className='text-button photos-more';more.textContent=`顯示更多照片（已顯示 ${Math.min(limit,list.length)} / ${list.length} 張）`;more.onclick=()=>{photoLimit.set(key,limit+24);renderGrid(grid,list,pending);};grid.after(more);}

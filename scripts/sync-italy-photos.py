@@ -48,3 +48,5 @@ for name in wanted:
  if not (folder/name).exists():raise ValueError('Missing preview '+name)
 (root/'photos.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
 print('Published preview index:',len(photos),'photos;',len(missing),'new previews')
+
+# Refresh the reviewed city views and supermarket classifications.
