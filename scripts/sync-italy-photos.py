@@ -3,7 +3,7 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from urllib.request import urlopen,Request
 from urllib.parse import urlparse
-import json,re,sys,zipfile,tempfile,shutil
+import json,re,sys,zipfile,tempfile,shutil,time,io
 root=Path(__file__).resolve().parents[1]/'italy-2026';config=json.loads((root/'photo-service.json').read_text());base=config.get('baseUrl','').rstrip('/')
 u=urlparse(base)
 if u.scheme!='https' or not u.hostname.endswith('.trycloudflare.com'):raise ValueError('Unexpected album host')
@@ -21,15 +21,21 @@ for p in photos:
 data={'photos':[{k:p.get(k,'') for k in ['id','spotId','title','caption','uploadedAt','takenAt','width','height','originalName','staticUrl']} for p in photos]}
 folder=root/'photos';folder.mkdir(exist_ok=True);wanted={p['id']+'.jpg' for p in photos};missing=[p for p in photos if not (folder/(p['id']+'.jpg')).exists()]
 if len(missing)>100:
- with tempfile.TemporaryDirectory() as td:
-  archive=Path(td)/'public.zip'
-  with get('/api/export',180) as r,archive.open('wb') as f:shutil.copyfileobj(r,f)
-  with zipfile.ZipFile(archive) as z:
-   for info in z.infolist():
-    name=Path(info.filename)
-    if name.parent.as_posix()=='photos' and name.name in wanted:
-     if info.file_size>8*1024*1024:raise ValueError('Preview too large')
-     (folder/name.name).write_bytes(z.read(info))
+ def download_batch(batch):
+  for attempt in range(4):
+   try:
+    with get('/api/export?batch='+str(batch),180) as r:body=r.read()
+    with zipfile.ZipFile(io.BytesIO(body)) as z:
+     for info in z.infolist():
+      name=Path(info.filename)
+      if name.parent.as_posix()=='photos' and name.name in wanted:
+       if info.file_size>8*1024*1024:raise ValueError('Preview too large')
+       (folder/name.name).write_bytes(z.read(info))
+    print('Copied photo group',batch+1,flush=True);return
+   except Exception:
+    if attempt==3:raise
+    time.sleep(3*(attempt+1))
+ with ThreadPoolExecutor(max_workers=3) as pool:list(pool.map(download_batch,range((len(photos)+39)//40)))
 else:
  def download(p):
   with get('/media/web/'+p['id']+'.jpg') as r:body=r.read(8*1024*1024+1)

@@ -49,7 +49,7 @@
   const api=(path)=>service+path;
   async function request(path,options={}) {
     if(!service)throw new Error('照片相簿尚未連線，請保持相簿電腦在線後再試。');
-    const r=await fetch(api(path),{...options,signal:AbortSignal.timeout(8000)});
+    const r=await fetch(api(path),{...options,signal:AbortSignal.timeout(30000)});
     const body=await r.json();if(!r.ok){const err=new Error(r.status===401?'管理碼不正確，請確認大小寫。全形、半形都可以。':(body.error||'照片相簿暫時無法連線，請稍後重試。'));err.status=r.status;throw err;}return body;
   }
   const photoLimit=new Map();
