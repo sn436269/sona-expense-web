@@ -19,10 +19,10 @@
    if(!Array.isArray(envelope.ciphertextParts)||envelope.ciphertextParts.length!==4||envelope.ciphertextParts.some((v,i)=>v!=='vault.enc.'+(i+1)+'.txt'))throw Error('加密資料索引不相符。');
    const segments=await Promise.all(envelope.ciphertextParts.map(async path=>{const r=await fetch('./'+path,{cache:'no-store',credentials:'omit',referrerPolicy:'no-referrer'});if(!r.ok)throw Error('加密資料下載未完成，請稍後重試。');return r.text()}));
    const ciphertext=segments.join('');
-   const material=await crypto.subtle.importKey('raw',new TextEncoder().encode(field.value.trim()),'PBKDF2',false,['deriveKey']);
+   const material=await crypto.subtle.importKey('raw',new TextEncoder().encode(field.value.trim().normalize('NFKC')),'PBKDF2',false,['deriveKey']);
    const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:bytes(envelope.salt),iterations:envelope.iterations,hash:'SHA-256'},material,{name:'AES-GCM',length:256},false,['decrypt']);
    let decrypted;
-   try{decrypted=await crypto.subtle.decrypt({name:'AES-GCM',iv:bytes(envelope.iv)},key,bytes(ciphertext))}catch{throw Error('解鎖碼不正確，或資料未完整下載。請確認後再試。')}
+   try{decrypted=await crypto.subtle.decrypt({name:'AES-GCM',iv:bytes(envelope.iv)},key,bytes(ciphertext))}catch{throw Error('密碼不正確（大小寫須一致），或資料未完整下載。請確認後再試。')}
    const stream=new Blob([decrypted]).stream().pipeThrough(new DecompressionStream('gzip'));
    const records=JSON.parse(await new Response(stream).text());
    if(!Array.isArray(records.people)||!Array.isArray(records.summary)||!Array.isArray(records.pay))throw Error('資料結構不完整。');
