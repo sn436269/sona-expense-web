@@ -1,1 +1,1 @@
-{"format":"medici-salary-v1","algorithm":"AES-256-GCM","kdf":"PBKDF2-SHA256","iterations":600000,"compression":"gzip","passwordNormalization":"NFKC","caseSensitive":true,"salt":"DYSxJ57uYrui8JHUOT/UOg==","iv":"jOvDP/tB5WElq11k","ciphertextParts":["vault.enc.1.txt","vault.enc.2.txt","vault.enc.3.txt","vault.enc.4.txt"]}
+{"format":"medici-salary-v2","algorithm":"AES-256-GCM","compression":"gzip","iv":"BJ4x1NhT1rNARBiW","ciphertextParts":["vault.enc.1.txt","vault.enc.2.txt","vault.enc.3.txt","vault.enc.4.txt"]}
