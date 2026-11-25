@@ -1,8 +1,7 @@
-
 // 心靈花園共用首頁的 mt 登入閘門；此元件只在驗證成功後掛載。
 function MediciSoul({onHome,onLogout}) {
  D.useEffect(()=>{window.scrollTo(0,0)},[]);
- const h=D.createElement, [tab,setTab]=D.useState('stages'), [stage,setStage]=D.useState(0), [checks,setChecks]=D.useState([]);
+ const h=D.createElement, [tab,setTab]=D.useState('stages'), [stage,setStage]=D.useState(0), [checks,setChecks]=D.useState([]), [inboxOpen,setInboxOpen]=D.useState(false);
  const stages=[
  {name:'好感',title:'只有好感時，妳像生活裡的甜點',body:'見面很開心，分開也不會想妳；臨時有空，才問妳要不要出來。像吃甜點，有很好，沒有也沒差。',note:'只有靠近和曖昧，還看不出長期交往的打算。',ask:'他會提前為妳安排時間，還是只有臨時想起妳？'},
  {name:'喜歡',title:'開始喜歡妳，關心會多一點行動',body:'妳說肚子痛，他接下來怎麼做？比起只說「多喝熱水、早點休息」，更值得留意的是：他有沒有記得妳不舒服，問妳需要什麼，或在能力範圍內提供照顧。',note:'關心可以有不同形式，重點是有沒有回應妳的需要。',ask:'他的關心，有沒有從一句話走進日常？'},
@@ -12,7 +11,7 @@ function MediciSoul({onHome,onLogout}) {
  const questions=['時間｜會提前約妳，也尊重妳的安排嗎？','感受｜會注意妳的情緒，願意聽妳說嗎？','行動｜表達關心後，有持續而具體的回應嗎？','相處｜在朋友面前，也讓妳自在、有參與感嗎？','未來｜做重要決定時，會和妳一起討論嗎？','自己｜在這段關係裡，妳能安心做自己嗎？'];
  const btn=(text,fn,cls='soul-button')=>h('button',{type:'button',className:cls,onClick:fn},text);
  return h('div',{className:'soul-shell'},
-  h('header',{className:'soul-header'},btn('Clarice de’ Medici',onHome,'soul-brand'),h('span',null,'心靈花園'),btn('登出',onLogout,'soul-text-button')),
+  h('header',{className:'soul-header'},btn('Clarice de’ Medici',onHome,'soul-brand'),h('span',null,'心靈花園'),h('div',{className:'soul-header-actions'},h('button',{type:'button',className:'soul-inbox-trigger',onClick:()=>setInboxOpen(true),'aria-haspopup':'dialog'},'＋ 素材收集箱'),btn('登出',onLogout,'soul-text-button'))),inboxOpen&&h(MediciSoulInbox,{onClose:()=>setInboxOpen(false)}),
   h('main',{id:'soul-main',className:'soul-main'},
    h('section',{className:'soul-hero'},h('div',{className:'soul-hero-copy'},h('p',{className:'soul-eyebrow'},'A LITTLE SPACE FOR YOUR HEART'),h('h1',null,'把心安放好，',h('br'),h('em',null,'再慢慢靠近。')),h('p',{className:'soul-lead'},'甜言蜜語讓人心動，日常行動讓心有依靠。',h('br'),'給自己一點時間，看清關係，也聽見自己。'),h('button',{type:'button',className:'soul-button',onClick:()=>document.getElementById('soul-reading')?.scrollIntoView({behavior:'smooth'})},'開始讀一讀')),h('div',{className:'soul-orbit','aria-hidden':'true'},h('div',{className:'soul-orbit-ring'}),h('span',{className:'soul-orbit-word'},'慢慢來'),h('small',null,'LET YOUR HEART BREATHE'))),
    h('section',{className:'soul-summary','aria-label':'三個觀察方向'},[['時間','是否為妳留一個位置'],['感受','是否願意理解與照顧'],['未來','是否把彼此一起考慮']].map(([title,body])=>h('div',{key:title},h('h2',null,title),h('p',null,body)))),
